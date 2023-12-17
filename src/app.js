@@ -1,6 +1,5 @@
 const express = require("express");
 const config = require("./config");
-const path = require("path");
 
 const personas = require("./modulos/personas/rutas");
 
@@ -9,6 +8,13 @@ const app = express();
 //Configuracion:
 app.set("port", config.app.port);
 
+//Motor De Plantillas:
+app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
+
+//Utilizar Servicio De Archivos Estaticos:
+app.use(express.static("assets"));
+
 //Rutas De Los Endpoints:
 app.use("/api/personas", personas);
 
@@ -16,7 +22,11 @@ app.use("/api/personas", personas);
 
 //Ruta Para Acceder Al Login:
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname + "/index.html"));
+  res.render("index");
+});
+
+app.get("/dashboard", function (req, res) {
+  res.render("pages/dashboard/dashboard");
 });
 
 module.exports = app;
