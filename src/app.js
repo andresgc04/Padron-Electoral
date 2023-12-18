@@ -29,4 +29,8 @@ app.get("/dashboard", function (req, res) {
   res.render("pages/dashboard/dashboard");
 });
 
+app.get("/personas", function (req, res) {
+  res.render("pages/personas/personas");
+});
+
 module.exports = app;
