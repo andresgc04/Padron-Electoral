@@ -2,6 +2,7 @@ const express = require("express");
 const config = require("./config");
 
 const personas = require("./modulos/personas/rutas");
+const partidosPoliticos = require("./modulos/partidos-politicos/rutas");
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(express.static("assets"));
 
 //Rutas De Los Endpoints:
 app.use("/api/personas", personas);
+app.use("/api/partidos-politicos", partidosPoliticos);
 
 //Rutas De Las Vistas:
 
