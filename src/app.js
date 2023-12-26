@@ -35,4 +35,8 @@ app.get("/personas", function (req, res) {
   res.render("pages/personas/personas");
 });
 
+app.get("/partidos-politicos", function (req, res) {
+  res.render("pages/partidos-politicos/partidos-politicos");
+});
+
 module.exports = app;

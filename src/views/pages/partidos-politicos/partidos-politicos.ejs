@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <%- include("../../templates/head.ejs", {titleWeb: 'Dashboard'}); %>
+  <!-- /. Head -->
+
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Preloader -->
+      <%- include("../../templates/preloader.ejs"); %>
+      <!-- /. Preloader -->
+
+      <!-- Navbar -->
+      <%- include("../../templates/navbar.ejs") %>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
+      <%- include("../../templates/main-sidebar-container.ejs") %>
+      <!-- /. Main Sidebar Container -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <%- include("../../templates/content-header.ejs", { titleContentHeader:
+        'Listado De Personas', linkContentHeader:'/dashboard',
+        titleBreadCrumbContentHeader: 'Dashboard',
+        subtitleBreadCrumbContentHeader: 'Listado De Personas'}); %>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <!-- Main row -->
+            <div class="row">
+              <!-- col content -->
+              <section class="col-xl-12 col-lg-12">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      <i class="fas fa-users mr-1"></i>
+                      <span>Listado De Personas</span>
+                    </h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <div class="row mb-4">
+                      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="d-flex justify-content-end">
+                          <button type="button" class="btn btn-primary">
+                            <span class="mr-1">Registrar Nueva Persona</span>
+                            <i class="fas fa-plus-circle"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="table-responsive">
+                          <table
+                            id="personasListTable"
+                            class="table table-bordered table-striped"
+                          >
+                            <thead>
+                              <tr>
+                                <th>NOMBRE</th>
+                                <th>CEDULA</th>
+                                <th>SEXO</th>
+                                <th>ESTADO</th>
+                                <th>ACCIONES</th>
+                              </tr>
+                            </thead>
+                            <tbody></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </section>
+              <!-- /. col content -->
+            </div>
+            <!-- /.row (main row) -->
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Footer -->
+      <%- include("../../templates/footer.ejs"); %>
+      <!-- /.Footer-->
+
+      <!-- Control Sidebar -->
+      <%- include("../../templates/control-sidebar.ejs"); %>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <%- include("../../templates/scripts"); %>
+    <script type="text/javascript" src="js/personas/personas.js"></script>
+  </body>
+</html>
