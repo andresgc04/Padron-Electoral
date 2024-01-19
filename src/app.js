@@ -1,10 +1,19 @@
 const express = require("express");
+const morgan = require("morgan");
 const config = require("./config");
 
 const personas = require("./modulos/personas/rutas");
 const partidosPoliticos = require("./modulos/partidos-politicos/rutas");
 
 const app = express();
+
+//Middleware:
+//Middleware Morgan:
+app.use(morgan("dev"));
+
+//Middleware Para Interpretar JSON:
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //Configuracion:
 app.set("port", config.app.port);

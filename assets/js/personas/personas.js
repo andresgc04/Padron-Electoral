@@ -1,5 +1,3 @@
-console.log("Hola");
-
 const personaslistTable = () => {
   $.ajax({
     url: "http://localhost:5000/api/personas",

@@ -22,9 +22,9 @@
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <%- include("../../templates/content-header.ejs", { titleContentHeader:
-        'Listado De Personas', linkContentHeader:'/dashboard',
+        `Listado De Partidos Políticos`, linkContentHeader:'/dashboard',
         titleBreadCrumbContentHeader: 'Dashboard',
-        subtitleBreadCrumbContentHeader: 'Listado De Personas'}); %>
+        subtitleBreadCrumbContentHeader: 'Listado De Partidos Políticos'}); %>
         <!-- /.content-header -->
 
         <!-- Main content -->
@@ -39,7 +39,7 @@
                   <div class="card-header">
                     <h3 class="card-title">
                       <i class="fas fa-users mr-1"></i>
-                      <span>Listado De Personas</span>
+                      <span>Listado De Partidos Políticos</span>
                     </h3>
                   </div>
                   <!-- /.card-header -->
@@ -48,7 +48,7 @@
                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                         <div class="d-flex justify-content-end">
                           <button type="button" class="btn btn-primary">
-                            <span class="mr-1">Registrar Nueva Persona</span>
+                            <span class="mr-1">Registrar Nuevo Partido Político</span>
                             <i class="fas fa-plus-circle"></i>
                           </button>
                         </div>
@@ -58,14 +58,13 @@
                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                         <div class="table-responsive">
                           <table
-                            id="personasListTable"
+                            id="partidosPoliticosListTable"
                             class="table table-bordered table-striped"
                           >
                             <thead>
                               <tr>
-                                <th>NOMBRE</th>
-                                <th>CEDULA</th>
-                                <th>SEXO</th>
+                                <th>PARTIDO POL&Iacute;TICO</th>
+                                <th>SIGLAS DEL PARTIDO POL&Iacute;TICO</th>
                                 <th>ESTADO</th>
                                 <th>ACCIONES</th>
                               </tr>
@@ -102,6 +101,6 @@
 
     <!-- jQuery -->
     <%- include("../../templates/scripts"); %>
-    <script type="text/javascript" src="js/personas/personas.js"></script>
+    <script type="text/javascript" src="js/partidos_politicos/partidos_politicos.js"></script>
   </body>
 </html>
