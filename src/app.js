@@ -4,6 +4,7 @@ const config = require("./config");
 
 const personas = require("./modulos/personas/rutas");
 const partidosPoliticos = require("./modulos/partidos-politicos/rutas");
+const posicionesPoliticas = require("./modulos/posiciones-politicas/rutas");
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static("assets"));
 //Rutas De Los Endpoints:
 app.use("/api/personas", personas);
 app.use("/api/partidos-politicos", partidosPoliticos);
+app.use("/api/posiciones-politicas", posicionesPoliticas);
 
 //Rutas De Las Vistas:
 
@@ -46,6 +48,10 @@ app.get("/personas", function (req, res) {
 
 app.get("/partidos-politicos", function (req, res) {
   res.render("pages/partidos-politicos/partidos-politicos");
+});
+
+app.get("/posiciones-politicas", function (req, res) {
+  res.render("pages/posiciones-politicas/posiciones-politicas");
 });
 
 module.exports = app;
