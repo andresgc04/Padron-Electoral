@@ -46,6 +46,10 @@ app.get("/personas", function (req, res) {
   res.render("pages/personas/personas");
 });
 
+app.get("/paises", function (req, res) {
+  res.render("pages/paises/paises");
+});
+
 app.get("/partidos-politicos", function (req, res) {
   res.render("pages/partidos-politicos/partidos-politicos");
 });
