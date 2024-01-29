@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const config = require("./config");
 
 const personas = require("./modulos/personas/rutas");
+const paises = require("./modulos/paises/rutas");
 const partidosPoliticos = require("./modulos/partidos-politicos/rutas");
 const posicionesPoliticas = require("./modulos/posiciones-politicas/rutas");
 
@@ -30,6 +31,7 @@ app.use(express.static("assets"));
 app.use("/api/personas", personas);
 app.use("/api/partidos-politicos", partidosPoliticos);
 app.use("/api/posiciones-politicas", posicionesPoliticas);
+app.use("/api/paises", paises);
 
 //Rutas De Las Vistas:
 
