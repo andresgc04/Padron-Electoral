@@ -7,7 +7,7 @@ function ObtenerTodosLosColegiosElectorales() {
     conexion.query(
       `
            SELECT colegiosElectorales.COLEGIO_ELECTORAL_ID, colegiosElectorales.NOMBRE_COLEGIO_ELECTORAL,
-                  estados.NOMBRE_ESTADO
+                  estados.NOMBRE_ESTADO ESTADO
              FROM COLEGIOS_ELECTORALES colegiosElectorales
        INNER JOIN ESTADOS estados
                ON colegiosElectorales.ESTADO_ID = estados.ESTADO_ID
