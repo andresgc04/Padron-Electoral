@@ -44,6 +44,10 @@ app.get("/dashboard", function (req, res) {
   res.render("pages/dashboard/dashboard");
 });
 
+app.get("/colegios-electorales", function (req, res) {
+  res.render("pages/colegios-electorales/colegios-electorales");
+});
+
 app.get("/personas", function (req, res) {
   res.render("pages/personas/personas");
 });
