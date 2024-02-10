@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const config = require("./config");
 
+const colegiosElectorales = require("./modulos/colegios-electorales/rutas");
 const personas = require("./modulos/personas/rutas");
 const paises = require("./modulos/paises/rutas");
 const partidosPoliticos = require("./modulos/partidos-politicos/rutas");
@@ -28,6 +29,7 @@ app.set("views", __dirname + "/views");
 app.use(express.static("assets"));
 
 //Rutas De Los Endpoints:
+app.use("/api/colegios-electorales", colegiosElectorales);
 app.use("/api/personas", personas);
 app.use("/api/partidos-politicos", partidosPoliticos);
 app.use("/api/posiciones-politicas", posicionesPoliticas);
